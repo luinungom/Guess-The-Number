@@ -17,7 +17,6 @@ function numberGenerator() {
 
 function resetValues() {
     number = numberGenerator();
-    console.log(number);
     checkButton.disabled = false;
     counter = 1;
     score = 20;
@@ -39,12 +38,10 @@ function resetAll() {
             document.querySelector('.message').textContent = 'No number :(';
         } else {
             counter ++;
-            console.log(counter)
             if(guess > number) {
                 document.querySelector('.message').textContent = 'Too high';
                 document.querySelector('.score').textContent = score;
                 score --;
-                console.log(score);
                 }
             if (guess < number) {
                 document.querySelector('.message').textContent = 'Too low';
