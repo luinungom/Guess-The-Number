@@ -27,7 +27,7 @@ function resetAll() {
     document.querySelector('.guess').value = '';
     document.body.style.backgroundColor = '#222';
     document.querySelector('.score').textContent = score;
-    document.querySelector('.message').textContent = 'Start guessing 🤔';
+    document.querySelector('.message').textContent = 'Start guessing...🤔';
     document.querySelector('.number').textContent = '?';
 };
 
