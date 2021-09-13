@@ -27,7 +27,7 @@ function resetAll() {
     document.querySelector('.guess').value = '';
     document.body.style.backgroundColor = '#222';
     document.querySelector('.score').textContent = score;
-    document.querySelector('.message').textContent = 'Start guessing...';
+    document.querySelector('.message').textContent = 'Start guessing 🤔';
     document.querySelector('.number').textContent = '?';
 };
 
@@ -35,21 +35,21 @@ function resetAll() {
     const guess = Number (document.querySelector('.guess').value);
     if (counter < 20){
         if (!guess) {
-            document.querySelector('.message').textContent = 'No number :(';
+            document.querySelector('.message').textContent = 'No number 🥺';
         } else {
             counter ++;
             if(guess > number) {
-                document.querySelector('.message').textContent = 'Too high';
+                document.querySelector('.message').textContent = '📈 Too high';
                 document.querySelector('.score').textContent = score;
                 score --;
                 }
             if (guess < number) {
-                document.querySelector('.message').textContent = 'Too low';
+                document.querySelector('.message').textContent = '📉 Too low';
                 document.querySelector('.score').textContent = score;
                 score --;
                 }
             if (guess === number ) {
-                document.querySelector('.message').textContent = 'Bingo!'
+                document.querySelector('.message').textContent = 'Bingo! 🎉'
                 document.querySelector('.score').textContent = score;
                 document.body.style.backgroundColor = '#60b347';
                 document.querySelector('.check').disabled;
@@ -62,7 +62,7 @@ function resetAll() {
                 }
         }
     } else {
-        document.querySelector('.message').textContent = 'Game over :(';
+        document.querySelector('.message').textContent = 'Game over 💀';
         document.querySelector('.score').textContent = '0';
         checkButton.disabled = true;
         document.body.style.backgroundColor = '#ff0000';
